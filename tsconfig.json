@@ -1,0 +1,36 @@
+{
+  "extends": "@tsconfig/ember/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "declarationMap": false,
+    "allowImportingTsExtensions": true,
+    "declaration": false,
+    "allowJs": true,
+    // Apps don't need to publish declarations
+    "paths": {
+      "ember-boilerplate/tests/*": [
+        "tests/*"
+      ],
+      "ember-cli-flash/*": ["node_modules/ember-cli-flash"],
+      "ember-boilerplate/*": [
+        "app/*"
+      ],
+      "*": [
+        "types/*"
+      ]
+    }
+  },
+  "glint": {
+    "environment": [
+      "ember-loose",
+      "ember-template-imports"
+    ]
+  },
+  "include": [
+    "app/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "public/setup-worker.js"
+  ]
+}
